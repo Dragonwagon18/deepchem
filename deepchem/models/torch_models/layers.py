@@ -7370,6 +7370,10 @@ class AttnLSTMEmbedding(nn.Module):
         self.built = True
 
     def __repr__(self):
+        """Returns a string representation of the AttnLSTMEmbedding layer's configuration.
+           Includes n_test, n_support, n_feat, and max_depth.
+        """
+
         return (
             f'{self.__class__.__name__}(n_test={self.n_test}, n_support={self.n_support}, n_feat={self.n_feat}, max_depth={self.max_depth})'
         )
@@ -7385,7 +7389,7 @@ class AttnLSTMEmbedding(nn.Module):
         
         Returns
         -------
-        list
+        List
             Returns two tensors of same shape as input. Namely the output
             shape will be [(n_test, n_feat), (n_support, n_feat)]
         """
